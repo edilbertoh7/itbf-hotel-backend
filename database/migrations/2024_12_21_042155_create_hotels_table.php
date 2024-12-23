@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('hotels', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            // $table->text('adrress');
-            $table->foreignId('address')->constrained('municipalities')->onDelete('cascade');
-            $table->string('city',100);
+            $table->text('address');
+            $table->foreignId('city')->constrained('municipalities')->onDelete('cascade');
             $table->string('tax_id',20)->unique();
             $table->integer('max_rooms');
             $table->timestamps();

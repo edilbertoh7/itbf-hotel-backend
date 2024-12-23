@@ -20,8 +20,11 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             RoomTypesSeeder::class,
+            AssignmentsSeeder::class,
             AccommodationsSeeder::class,
-            AssignmentRulesSeeder::class,
+            DepartmentsSeeder::class,
+            MunicipalitiesSeeder::class,
+            HotelsSeeder::class,
         ]);
     }
 }

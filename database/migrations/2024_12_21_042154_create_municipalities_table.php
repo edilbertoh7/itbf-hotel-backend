@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('municipalities', function (Blueprint $table) {
             $table->id();
             $table->foreignId('department_id')->constrained('departments')->onDelete('cascade');
-            $table->string('divipola_code')->unique();
+            $table->string('divipola_code');
             $table->string('name');
             $table->timestamps();
         });

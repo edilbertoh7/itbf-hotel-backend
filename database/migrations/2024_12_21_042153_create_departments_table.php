@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
-            $table->string('divipola_code')->unique();
+            $table->string('divipola_code');
             $table->string('name');
             $table->timestamps();
         });
